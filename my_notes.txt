@@ -1,0 +1,29 @@
+- In requirements.txt, "-e ." is used to install local packages of my program in virtual environment.
+
+STEP - 01: CREATING THE VIRTAUL ENVIRONMENT:
+    Create a virtual environment using following commands:
+        - To check all the pythons involved: "py -0"
+        - To use Python 3.10: py -3.10 -m venv venv
+        - To activate the Virtual Environment: .\venv\Scripts\activate
+        - To select Interpreter in VS Code: Press `Ctrl+Shift+P` → type "Python: Select Interpreter" and choose the one with path like ".\venv\Scripts\python.exe"
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                                              WHAT __init__.py FILE MEANS?
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+        In simple terms, `__init__.py` is a special file that tells Python a folder is a package, so you can import code from it.
+
+        If you have:
+
+        ```
+        my_project/
+        │
+        ├── utils/
+        │   ├── __init__.py
+        │   └── helper.py
+        ```
+
+        You can do: from utils import helper
+
+        Without `__init__.py`, that import wouldn't work in older Python versions, and some tools still expect it.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
